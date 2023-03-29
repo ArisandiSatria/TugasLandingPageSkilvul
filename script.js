@@ -43,12 +43,17 @@ function validateFormData(data) {
   return true;
 }
 
-function submit() {
-  e.preventDefault();
+function submit(event) {
+  event.preventDefault();
   const warning = document.getElementById("warning");
   if (!validateFormData(handleGetFormData())) {
+    warning.style.display = "block";
     warning.innerHTML = "Periksa form anda sekali lagi";
   } else {
     warning.innerHTML = "";
   }
 }
+
+const submitForm = document.getElementById("submit-form");
+
+submitForm.addEventListener("click", submit);

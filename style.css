@@ -290,6 +290,7 @@ nav .nav-link a:hover {
   border-radius: 6px;
   padding: 12px 10px;
   font-style: italic;
+  font-weight: bold;
 }
 
 footer {
